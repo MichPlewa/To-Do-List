@@ -1,12 +1,13 @@
+import Hero from './components/Hero/Hero.js';
+import SerchForm from './components/SearchForm/SearchForm.js';
+import List from './components/List/List.js';
+
 const App = () => {
   return (
     <div>
-      <h1>My first react App</h1>
-      <p>A simple to-do app, with lists, columns and card</p>
-      <form>
-        <input type="text"/>
-        <button>Search</button>
-      </form>
+      <Hero />
+      <SerchForm />
+      <List />
     </div>
   );
 };
