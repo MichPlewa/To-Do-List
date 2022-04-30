@@ -1,8 +1,10 @@
+import styles from './searchForm.module.scss';
+
 const SearchForm = () => {
   return (
-    <form>
-      <input type='text' />
-      <button>Seatch</button>
+    <form className={styles.searchForm}>
+      <input type='text' className={styles.input}/>
+      <button className={styles.button}>Seatch</button>
     </form>
   );
 };
