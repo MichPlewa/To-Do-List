@@ -1,4 +1,5 @@
 import styles from './column.module.scss';
+import Card from '../Card/Card.js';
 
 const Column = props => {
     return (
@@ -8,7 +9,7 @@ const Column = props => {
                 {props.title}
             </h2>
             <ul className={styles.cards}>
-                {props.cards.map(card => <li key={card.id}>{card.title}</li>)}
+                {props.cards.map(card => <Card key={card.id} title={card.title} />)}
             </ul>
         </article>
     );
