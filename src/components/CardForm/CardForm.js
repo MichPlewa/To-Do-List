@@ -5,12 +5,10 @@ import TextInput from './../TextInput/TextInput';
 
 const CardForm = props => {
 
-    
-    props.action({title: title},props.columnId);
     const [title, setTitle] = useState('');
     const handleSubmit = e => {
         e.preventDefault();
-        props.action({ title: title });
+        props.action({title: title},props.columnId);
         setTitle('');
     };
     
