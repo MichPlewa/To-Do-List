@@ -11,7 +11,7 @@
     "react-dom": "^18.0.0",
     "react-redux": "7.2.5",
     "react-scripts": "5.0.1",
-    "redux": "^4.2.0",
+    "redux": "^5.0.0-alpha.0",
     "redux-devtools-extension": "2.13.9",
     "sass": "^1.51.0",
     "shortid": "^2.2.16",
