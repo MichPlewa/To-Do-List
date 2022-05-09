@@ -1,7 +1,7 @@
 import styles from './cardForm.module.scss';
-import { useState } from 'react';
 import Button from './../Button/Button';
 import TextInput from './../TextInput/TextInput';
+import { useState } from 'react';
 
 const CardForm = (props) => {
   const [title, setTitle] = useState('');
