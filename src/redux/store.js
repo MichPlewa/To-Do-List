@@ -6,13 +6,12 @@ const reducer = (state, action) => {
   switch (action.type) {
     case 'ADD_COLUMN':
       return {
-        state,
-        columns: [...state.columns, { ...action.newColumn, id: shortid() }],
+        ...state,
+        columns: [...state.columns, { ...action.payload, id: shortid() }],
       };
     default:
-      console.log('Wrong action.type!');
+      return state;
   }
-  return state;
 };
 
 const store = createStore(
