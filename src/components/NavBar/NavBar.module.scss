@@ -1,0 +1,24 @@
+@use 'sass:math';
+@import '../../styles/settings.scss';
+.nav_wrapper {
+  font-size: $base-size * 2;
+  padding-left: $base-size * 10;
+  padding-right: $base-size * 10;
+  display: flex;
+  justify-content: space-between;
+  background-color: darken($color-dark, 3%);
+  align-items: center;
+}
+
+.nav_list {
+  list-style: none;
+  display: inline-flex;
+  li {
+    padding: $base-size;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $color-light;
+}
