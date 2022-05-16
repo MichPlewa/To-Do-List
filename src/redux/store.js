@@ -11,6 +11,10 @@ export const getFilteredCards = ({ cards, search }, columnId) =>
   cards.filter(
     (card) => card.columnId === columnId && strContains(card.title, search)
   );
+export const getListById = ({ lists }, listId) =>
+  lists.find((list) => list.id === listId);
+export const getColumnsByList = ({ columns }, listId) =>
+  columns.filter((column) => column.listId === listId);
 
 const reducer = (state, action) => {
   switch (action.type) {
