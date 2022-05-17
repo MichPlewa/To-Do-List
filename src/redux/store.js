@@ -11,15 +11,13 @@ export const getFilteredCards = ({ cards, search }, columnId) =>
   cards.filter(
     (card) => card.columnId === columnId && strContains(card.title, search)
   );
-export const inputValue = (state) => {
-  console.log('state: ', state.search);
-  return state.search;
-};
+export const inputValue = (state) => state.search;
 export const getListById = ({ lists }, listId) =>
   lists.find((list) => list.id === listId);
 export const getColumnsByList = ({ columns }, listId) =>
   columns.filter((column) => column.listId === listId);
 export const getAllLists = ({ lists }) => lists;
+export const addList = (payload) => ({ type: 'ADD_LIST', payload });
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -35,6 +33,11 @@ const reducer = (state, action) => {
       };
     case 'UPDATE_SEARCH':
       return { ...state, search: action.payload };
+    case 'ADD_LIST':
+      return {
+        ...state,
+        lists: [...state.lists, { ...action.payload, id: shortid() }],
+      };
     default:
       return state;
   }
