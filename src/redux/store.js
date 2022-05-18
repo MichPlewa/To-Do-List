@@ -11,7 +11,7 @@ export const getFilteredCards = ({ cards, search }, columnId) =>
   cards.filter(
     (card) => card.columnId === columnId && strContains(card.title, search)
   );
-export const inputValue = (state) => state.search;
+export const selectInputValue = (state) => state.search;
 export const getListById = ({ lists }, listId) =>
   lists.find((list) => list.id === listId);
 export const getColumnsByList = ({ columns }, listId) =>
