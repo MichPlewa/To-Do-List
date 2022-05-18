@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { getAllLists, addList } from '../../redux/store';
+import { addList } from '../../redux/listsRedux';
+import { getAllLists } from '../../redux/listsRedux';
 import styles from './Lists.module.scss';
 import { Link } from 'react-router-dom';
 import TextInput from '../TextInput/TextInput';
